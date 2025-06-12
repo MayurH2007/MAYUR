@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .traffic-light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .traffic-light.red {
+    background-color: #ef4444;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+  }
+  
+  .traffic-light.yellow {
+    background-color: #f59e0b;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+  }
+  
+  .traffic-light.green {
+    background-color: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+  }
+  
+  .traffic-light.off {
+    background-color: #374151;
+    box-shadow: none;
+  }
+}
